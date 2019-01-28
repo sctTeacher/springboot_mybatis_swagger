@@ -19,7 +19,7 @@ public class UserMapperTest {
 
     @Test
     public void test(){
-        List<User> users = mapper.queryUserList();
-      System.out.println(users);
+      //  List<User> users = mapper.queryUserList();
+      //System.out.println(users);
     }
 }
