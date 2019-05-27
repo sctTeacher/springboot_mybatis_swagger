@@ -8,12 +8,13 @@
 
 </head>
 <body>
+
+<br>
+<br>
+用户名：<input id="username" type="text">  <br/>
+密码：  <input id="password" type="password"> <br/>
+验证码：<input id="captchaCode" type="text"> <input type="button" value="提交" onclick="checkCaptcha()"> <br/>
 生成的验证码：<img id="changeCaptcha" src="http://127.0.0.1:9001/getCaptchaCode"> <a href="javascript:changeCaptcha()">看不清，换一张</a>
-<br>
-<br>
-用户名：<input id="username" type="text">
-密码：  <input id="password" type="password">
-验证码：<input id="captchaCode" type="text"> <input type="button" value="提交" onclick="checkCaptcha()">
 </body>
 <script type="text/javascript">
 
@@ -23,13 +24,14 @@
     }
     //验证输入的验证码
     function checkCaptcha(){
+        alert("xxx");
         var username = $("#username").val();
         var password = $("#password").val();
         var captchaCode = $("#captchaCode").val();
         $.ajax({
             type:'post',
             async : false,
-            url:'http://127.0.0.1:9001/checkCaptchaCode',
+            url:'http://127.0.0.1:9001/login',
             data:{"captchaCode" : captchaCode,
                     "username":username,
                     "password":password

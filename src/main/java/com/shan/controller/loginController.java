@@ -5,6 +5,7 @@ import com.google.code.kaptcha.Producer;
 import com.google.code.kaptcha.impl.DefaultKaptcha;
 import com.shan.domain.User;
 import com.shan.mapper.UserMapper;
+import com.shan.utils.R;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,7 +21,7 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.List;
 
-@Api(description = "登录管理")
+@Api(description = "登录管理aaa")
 @Controller
 public class loginController {
 
@@ -32,7 +33,7 @@ public class loginController {
      * @return
      */
     @ApiOperation(value = "去登录", notes = "去登录")
-    @RequestMapping(value = "toLogin", method = RequestMethod.GET)
+    @RequestMapping(value = "/", method = RequestMethod.GET)
     public String toLogin() {
         return "login";
     }
@@ -68,8 +69,9 @@ public class loginController {
     @ApiOperation(value = "登录", notes = "登录")
     @PostMapping("/login")
     @ResponseBody
-    public List<User> login() {
-
+    public R login(@RequestParam("username") String username ,
+                     @RequestParam("password") String password ,
+                     @RequestParam("captchaCode") String captchaCode) {
         return null;
     }
 
