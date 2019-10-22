@@ -8,4 +8,6 @@ import java.util.List;
 public interface UserMapper {
 
     public List<User> queryUserList();
+
+    int insertBatch(List<User> users);
 }
