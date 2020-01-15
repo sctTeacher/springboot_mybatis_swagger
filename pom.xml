@@ -161,6 +161,16 @@
         </dependency>
         <!-- easyexcel   end-->
 
+        <!-- Spring Boot  JavaMailSender   start-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-mail</artifactId>
+        </dependency>
+        <!-- Spring Boot  JavaMailSender   end-->
+
+
+
+
     </dependencies>
 
     <build>
