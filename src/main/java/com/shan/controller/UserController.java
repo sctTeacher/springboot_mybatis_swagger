@@ -73,7 +73,21 @@ public class UserController {
         u.setName(user.getName());
         return u;
     }
-
+    /**
+     * 作者:   shanc
+     * 时间:   2021/4/12 10:51
+     * 描述:   git请求 实体接受参数
+     */
+    @ApiOperation(value = "修改用户", notes = "修改用户")
+    @GetMapping("/update2")
+    @ResponseBody
+    public User update2(User user) {
+        System.out.println(user.toString());
+        User u = new User();
+        u.setUsername(user.getUsername());
+        u.setName(user.getName());
+        return u;
+    }
 
 
     /**

@@ -145,11 +145,20 @@
             <artifactId>lombok</artifactId>
         </dependency>
 
+
+<!--poi tl start导出word-->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>4.1.2</version>
+        </dependency>
         <dependency>
             <groupId>com.deepoove</groupId>
             <artifactId>poi-tl</artifactId>
-            <version>1.6.0</version>
+            <version>1.9.1</version>
         </dependency>
+        <!--poi tl send 导出word-->
+
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-compress</artifactId>
@@ -176,7 +185,11 @@
             <artifactId>spring-boot-starter-mail</artifactId>
         </dependency>
         <!-- Spring Boot  JavaMailSender   end-->
-
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.62</version>
+        </dependency>
 
 
 
